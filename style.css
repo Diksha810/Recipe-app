@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background-color: #392b1d;
+    color: #fff;
+}
+
+nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #23180D;
+}
+
+nav input {
+    margin-left: 10px;
+    width: 600px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border: 2px solid #c52D2f;
+    transition: 0.5s;
+}
+
+::placeholder {
+    color: #817d7d;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+nav input:hover {
+    background-color: #f7eded;
+}
+
+nav h1 {
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav h1 span {
+    color: #c52D2f;
+}
+
+nav form {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, orange, #c52D2f);
+    font-size: 18px;
+    padding: 12px 18px;
+    border-radius: 4px;
+    transform: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #c52D2f, orange);
+}
+
+.recipe-container {
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 6px;
+    place-items: center;
+}
+
+.recipe {
+    background-color: #f7eded;
+    display: flex;
+    flex-direction: column;
+    color: #D57D1f;
+    border: 6px;
+    box-shadow: 0 5px 10px rgba(228, 54, 54, 0.1), -5px -5px 10px rgba(34, 34, 34, 0.5);
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe:hover {
+    transform: scale(1.02);
+}
+
+.recipe img {
+    height: 300px;
+}
+
+.recipe h3 {
+    font-size: 24px;
+    color: #23180D;
+}
+
+.recipe p {
+    font-size: 20px;
+    color: #D57D1f;
+    margin: 5px 0;
+}
+
+.recipe span {
+    font-weight: 600;
+}
+
+.recipe button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 18px auto;
+    background-color: #c52D2f;
+    border: none;
+    color: #fff;
+}
+
+.recipe button:hover {
+    background-color: #e25e60;
+}
+
+.recipe-details-content {
+    padding: 30px;
+}
+
+.recipeName {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #c52D2f;
+}
+
+.ingredientList {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.recipeInstructions p {
+    line-height: 30px;
+    white-space: pre-line;
+    margin-bottom: 10px;
+}
+
+.recipeInstructions h3 {
+    color: #D57D1f;
+}
+
+.ingredientheading {
+    color: #D57D1f;
+}
+
+.recipe-close-btn {
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-close-btn {
+    background-color: #f7eded;
+}
+
+.recipe-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: #392b1d;
+    border-radius: 12px;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    transition: all0.5s ease-in-out;
+    overflow-y: scroll;
+}
+
+.recipe-details::webkit-scrollbar {
+    width: 10px;
+}
+
+.recipe-details::webkit-scrollbar-thumb {
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
+
+.body::webkit-scrollbar {
+    width: 16px;
+}
+
+.body::webkit-scrollbar-thumb {
+    background-color: #5ee25e;
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
+
+body::webkit-scrollbar-track {
+    background-color: aqua;
+}
+
+@media screen and (max-width:600px) {
+    nav {
+        flex-direction: coloumn;
+    }
+    nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
